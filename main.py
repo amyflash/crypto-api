@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from services.btc_dominance import get_btc_dominance
-from services.fear_greed import get_fear_and_greed_index
+from services.fear_greed import get_fear_and_greed
 from services.options import get_btc_options
-from services.prices import get_all_btc_prices
+from services.prices import get_all_prices
 
 app = FastAPI()
 
@@ -21,7 +21,7 @@ def btc_dominance():
 
 @app.get("/fear-greed")
 def fear_greed():
-    return get_fear_and_greed_index()
+    return get_fear_and_greed()
 
 @app.get("/btc-options")
 def btc_options():
@@ -29,4 +29,4 @@ def btc_options():
 
 @app.get("/btc-prices")
 def btc_prices():
-    return get_all_btc_prices()
+    return get_all_prices()
