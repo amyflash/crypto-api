@@ -64,12 +64,12 @@ def fetch_price_gate():
 def get_all_prices():
     print("Fetching BTC prices from all exchanges...")
     return {
-        "binance": fetch_price_binance(),
-        "bybit": fetch_price_bybit(),
+        #"binance": fetch_price_binance(),
+        #"bybit": fetch_price_bybit(),
         "okx": fetch_price_okx(),
-        "bitget": fetch_price_bitget(),
-        "upbit": fetch_price_upbit(),
-        "gate": fetch_price_gate()
+        #"bitget": fetch_price_bitget(),
+        #"upbit": fetch_price_upbit(),
+        #"gate": fetch_price_gate()
     }
 
 
